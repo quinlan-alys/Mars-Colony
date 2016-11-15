@@ -1,12 +1,9 @@
-<h1>
-  {{title}}
-  <app-list-test> Loading list...</app-list-test>
-</h1>
-<p>
-  {{message}}
-</p>
+<div class="app-container">
 
+  <router-outlet> </router-outlet>
+</div>
 
-<div>
-  {{div}}
-  </div>
+<a routerLink="/encounters" routerLinkActive="active">Encounters</a>
+   <a routerLink="/welcome" routerLinkActive="active">Welcome</a>
+<a routerLink="/register" routerLinkActive="active">Register</a>
+ <a routerLink="/report" routerLinkActive="active">Report</a>

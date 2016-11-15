@@ -1,0 +1,21 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  </head>
+
+
+<div class="welcome-container">
+
+  <h2> Mars Colony App </h2>
+<a routerLink="/register" routerLinkActive="active">
+  <div class="enter-button"></div>
+  </a>
+
+  <h3> Tap Circle to Enter</h3>
+  <nav>
+    <a routerLink="/welcome" routerLinkActive="active">Welcome</a>
+    <a routerLink="/report" routerLinkActive="active">Report</a>
+     <a routerLink="/encounters" routerLinkActive="active">Encounters</a>
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+  </nav>
+  <router-outlet> </router-outlet>
+</div>
