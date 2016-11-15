@@ -1,0 +1,24 @@
+<ul>
+  <li *ngFor ="let apple of appleList"> 
+    <div> name: {{apple.name}}
+      </div>
+      <div>
+        color: {{apple.color}}
+        </div>
+  </li>
+</ul>
+<div>
+  <form #appleForm="ngForm">
+    <h4> Apple form</h4>
+    Type: <input type="text" [(ngModel)]="apple.name" name="name" required />
+    Color: <input type="text" [(ngModel)]="apple.color" name="color" required/>
+
+    <button type ""
+     (click)="addApple(apple)"
+     [disabled]="appleForm.form.invalid" >
+     ADD Apple
+     
+    </button>
+
+  </form>
+  </div>

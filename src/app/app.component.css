@@ -1,0 +1,10 @@
+h1 {
+    color:blue;
+}
+
+div {
+    background-color: blueviolet;
+    height: 500px;
+    width: 500px;
+    color: white;
+}
