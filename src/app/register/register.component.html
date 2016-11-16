@@ -12,16 +12,17 @@
 
 <form class="register-form">
  
-  <input class="optionstyle" type="text" name="name" placeholder="Name">
+  <input class="optionstyle" type="text" name="name" placeholder="Name" [(ngModel)]="colonist.name">
 
-  <input class="optionstyle" type="number" name="age" placeholder="Age">
-  <select class="optionstyle">
-  <option value=''>Select Occupation:</option>
-  <option>Piggie</option>
-  <option>Coffee Grinder</option>
-  <option>Tea Drinker</option>
+  <input class="optionstyle" type="number" name="age" placeholder="Age" [(ngModel)]="colonist.age">
+  <select [(ngModel)]="colonist.job_id" class="optionstyle" name="job_id">
+  <option [value]='NO_JOB_SELECTED'>Select Occupation:</option>
+  <option *ngFor="let job of marsJobs" [value]="job.id"> {{ job.name }} - {{job.id}} </option>
+
 </select>
 </form>
-<button class="check-in"> Check in </button>
+<button [disabled]="occupationSelected"class="check-in"> Check in </button>
+
+{{ colonist.name }} - {{colonist.age}} - {{colonist.job_id}}
 </div>
 
