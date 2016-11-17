@@ -10,19 +10,20 @@
   <h1> Register</h1>
 
 
-<form class="register-form">
+<form [formGroup]= "registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
  
-  <input class="optionstyle" type="text" name="name" placeholder="Name" [(ngModel)]="colonist.name">
+  <input class="optionstyle" type="text" placeholder="Name" formControlName="name">
 
-  <input class="optionstyle" type="number" name="age" placeholder="Age" [(ngModel)]="colonist.age">
-  <select [(ngModel)]="colonist.job_id" class="optionstyle" name="job_id">
+  <input class="optionstyle" type="number" placeholder="Age" formControlName="age">
+  <select  class="optionstyle" formControlName="job_id">
   <option [value]='NO_JOB_SELECTED'>Select Occupation:</option>
-  <option *ngFor="let job of marsJobs" [value]="job.id"> {{ job.name }} - {{job.id}} </option>
+  <option *ngFor="let job of marsJobs" [value]="job.id"> {{ job.name }}</option>
 
 </select>
+<!--<a routerLink="/encounters" routerLinkActive="active">-->
+<button class="check-in"> Check in </button>
+<!--</a>-->
 </form>
-<button [disabled]="occupationSelected"class="check-in"> Check in </button>
 
-{{ colonist.name }} - {{colonist.age}} - {{colonist.job_id}}
 </div>
 

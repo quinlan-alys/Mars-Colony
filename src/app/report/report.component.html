@@ -1,3 +1,28 @@
-<p>
-  report works!
-</p>
+<!--<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  </head>
+
+
+<body class="report-body">
+
+
+  <div class="report-div">
+  <h1> Report Encounter</h1>
+  <h3>Safety on Mars is your Responsibility</h3>
+
+
+<form class="report-form" >
+  <select class="optionstyle" name="alientype">
+     <option [value]='NO_ALIEN_SELECTED'>Select Alien Type:</option>
+    <option *ngFor ="let alien of marsAliens" placeholder="Select Alien Type">{{alien.type}}</option>
+
+   </select>
+    <textarea class="actiontxt" placeholder="Action Taken" name="action" [(ngModel)]="report.action"> Acton Taken:</textarea>
+ 
+<a routerLink="/encounters" routerLinkActive="active">
+  <button class="reportbtn"> Report </button>
+  </a>
+</form>
+
+</div>
+-->

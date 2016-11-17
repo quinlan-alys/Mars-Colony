@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
 import  JobsService  from '../services/jobs.service';
 
+function cantBe(value: string): ValidatorFn {
+  return (control: AbstractControl): {[key: string]: any } => {
+    return control.value === '(none)' ? {'cant be none' :{value}}: null;
+  };
+}
 
 @Component({
   selector: 'app-register',
@@ -11,14 +17,13 @@ import  JobsService  from '../services/jobs.service';
 })
 export class RegisterComponent implements OnInit {
 
-colonist: NewColonist;
-marsJobs: Job[];
 
+marsJobs: Job[];
+registerForm: FormGroup;
 NO_JOB_SELECTED = '(none)';
 
   constructor(jobService: JobsService) { 
-
-    this.colonist = new NewColonist ( null, null, this.NO_JOB_SELECTED, null);
+    
     jobService.getJobs().subscribe((jobs) => {
       this.marsJobs = jobs;
     }, (err) => {
@@ -26,11 +31,44 @@ NO_JOB_SELECTED = '(none)';
     } 
     )};
 
+    cantBe(value:string): ValidatorFn {
+      return (control: AbstractControl): {[key: string]: any} => {
+        return control.value === value ? {' cant be value': {value}}:null;
+      };
+      }
+
+      tooOld(value:number): ValidatorFn {
+      return (control: AbstractControl): {[key: string]: any} => {
+        return control.value > 100 ? {'too old': {value}}:null;
+      };
+      }
+    
+
   ngOnInit() {
+    this.registerForm = new FormGroup ({
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+      age: new FormControl('', [Validators.required, Validators.maxLength(3)]),
+      job_id: new FormControl(this.NO_JOB_SELECTED, [this.cantBe(this.NO_JOB_SELECTED)]),
+    });
+  
+    setTimeout(() => {
+      console.log('I\'m late!');
+    }, 2000);
   }
 
-get occupationSelected (){
-  return this.colonist.job_id === this.NO_JOB_SELECTED;
+  onSubmit(event){
+    event.preventDefault();
+    if (this.registerForm.invalid) {
+      //the form is invalid
 
-}
+    }else{
+      const name = this.registerForm.get('name').value;
+      const age = this.registerForm.get('age').value;
+      const job_id = this.registerForm.get('job_id').value;
+
+      console.log('ok lersregister the new colonist', new NewColonist(name, job_id, age));
+    }
+    
+    }
+
 }

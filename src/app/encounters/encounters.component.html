@@ -1,3 +1,25 @@
-<p>
-  encounters works!
-</p>
+<!--<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+  </head>
+
+
+<body class="encounters-body">
+
+
+  <div class="encounters-div">
+  <h1>Recent Encounters</h1>
+  <h3>See an Alien? Report it? </h3>
+
+<ul class="encounterli">
+  <li *ngFor= "let encounter of marsEncounters">
+    <p> {{encounter.date}} - {{encounter.atype }}</p>
+    <p> {{encounter.action}}</p><br>
+   </li> 
+  </ul>
+<a routerLink="/report" routerLinkActive="active">
+<button class="encounter-report"> Report Encounter </button>
+</a>
+
+
+</div>
+-->
