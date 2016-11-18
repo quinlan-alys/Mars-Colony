@@ -48,7 +48,7 @@ NO_JOB_SELECTED = '(none)';
       console.log('I\'m late!');
     }, 2000);
   }
-
+  
   onSubmit(event){
     event.preventDefault();
     if (this.registerForm.invalid) {
