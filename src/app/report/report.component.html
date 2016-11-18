@@ -1,4 +1,4 @@
-<!--<head>
+<head>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
   </head>
 
@@ -11,18 +11,18 @@
   <h3>Safety on Mars is your Responsibility</h3>
 
 
-<form class="report-form" >
-  <select class="optionstyle" name="alientype">
+<form [formGroup]="reportForm" (ngSubmit)="onSubmit($event)" class="report-form" >
+  <select class="optionstyle" formControlName="atype">
      <option [value]='NO_ALIEN_SELECTED'>Select Alien Type:</option>
-    <option *ngFor ="let alien of marsAliens" placeholder="Select Alien Type">{{alien.type}}</option>
+    <option *ngFor ="let alien of marsAliens" [value]="alien.type" placeholder="Select Alien Type">{{alien.type}}</option>
 
    </select>
-    <textarea class="actiontxt" placeholder="Action Taken" name="action" [(ngModel)]="report.action"> Acton Taken:</textarea>
+    <textarea class="actiontxt" placeholder="Action Taken" formControlName="action" > Acton Taken:</textarea>
  
-<a routerLink="/encounters" routerLinkActive="active">
+<!--<a routerLink="/encounters" routerLinkActive="active">-->
   <button class="reportbtn"> Report </button>
-  </a>
+  <!--</a>-->
 </form>
 
 </div>
--->
+
