@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { NewColonist } from '../models';
+import { Colonist, NewColonist } from '../models';
 
 @Injectable()
 export default class ColonistService {
@@ -16,5 +16,14 @@ export default class ColonistService {
                     .map((res: Response) => res.json().colonists);
 
 }
+ submitColonist(colonist: NewColonist): Observable<Colonist> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+ 
+    return this.http.post(this.COLONISTS_JSON, { colonist }, { headers})
+             .map((res: Response) => res.json().encounter);
+  }
+
 
 }
+

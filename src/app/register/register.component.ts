@@ -61,7 +61,7 @@ NO_JOB_SELECTED = '(none)';
       const colonist = new NewColonist(name, job_id, age);
      
       this.colonistService.submitColonist(colonist).subscribe( () => {
-      this.router.navigate(['/colonists']);
+      this.router.navigate(['/encounters']);
     }, (err) => {
       console.log(err);
     });
