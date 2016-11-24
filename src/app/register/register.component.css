@@ -23,10 +23,17 @@ h1 {
 .check-in {
     color: white;
     font-family: 'Raleway', sans-serif;
-    border:none;
-    background-color: black;
-    margin-top: 6%;
+    border: none;
+    margin-top: 4%;
+    outline: none;
     font-size: 20px;
+    background-color: red;
+    width: 150px;
+    align-self: center;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+
 
 }
 .optionstyle {

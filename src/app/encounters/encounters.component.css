@@ -27,11 +27,14 @@
 
 .encounter-report {
     color: white;
+    background-color: red;
     font-family: 'Raleway', sans-serif;
-    border:none;
-    margin-top: 6%;
+    border: none;
+    margin: 1%;
+    width: 200px;
+    border-radius: 15px;
+    outline:none;
     font-size: 20px;
-
 }
 
 .encounters-div {

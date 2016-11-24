@@ -15,12 +15,12 @@ h2, h3 {
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 46px;
-    margin: 20px;
+    margin: 75px;
 
 
 }
 
-.enter-button {
+.circle {
     height: 200px;
     width: 200px;
     margin: 0 auto;
@@ -32,4 +32,63 @@ h2, h3 {
 
 nav {
     text-align: center;
+}
+
+.circle {
+  height:100px;
+  width:100px;
+  border-radius:50%;
+  background-color:darkred;
+  margin: 0;
+  position:relative;
+  top:51px;
+  left:50%;
+  
+  -webkit-transition:height .25s ease, width .25s ease;
+  transition:height .25s ease, width .25s ease;
+  
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+}
+
+.circle:hover{
+  height:150px;
+  width:150px;
+}
+
+.circle:before,
+.circle:after {
+  content:'';
+  display:block;
+  position:absolute;
+  top:0; right:0; bottom:0; left:0;
+  border-radius:50%;
+  border:1px solid lawngreen;
+}
+
+.circle:before {
+  -webkit-animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
+}
+.circle:after {
+  -webkit-animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
+}
+
+.circle:hover:before,
+.circle:hover:after {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes ripple{
+  0% {-webkit-transform:scale(1); }
+  75% {-webkit-transform:scale(1.75); opacity:1;}
+  100% {-webkit-transform:scale(2); opacity:0;}
+}
+
+@keyframes ripple{
+  0% {transform:scale(1); }
+  75% {transform:scale(1.75); opacity:1;}
+  100% {transform:scale(2); opacity:0;}
 }

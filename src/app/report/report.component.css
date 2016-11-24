@@ -31,8 +31,13 @@
 .reportbtn {
     color: white;
     font-family: 'Raleway', sans-serif;
-    border:none;
-    background-color: black;
+    border: none;
+    background-color: red;
+    width: 150px;
+    height: 39px;
+    border-radius: 30px;
+    align-self: center;
+    outline:none;
     margin-top: 6%;
     font-size: 20px;
 
