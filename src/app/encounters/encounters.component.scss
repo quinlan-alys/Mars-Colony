@@ -1,3 +1,9 @@
+$standard-margin-size: 1rem;
+$main-font-family: "Raleway", sans-serif;
+$theme-red-color: red;
+$theme-main-color: white;
+
+
 .encounters-body {
     text-align:center;
 
@@ -7,28 +13,28 @@
 .encounterli {
     text-align: left;
     margin-left: 5%;
-    font-family: 'Raleway', serif;
+    font-family: $main-font-family;
     width: 100%;
     height: 200px;
     border: none;
     box-shadow: none;
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: $standard-margin-size;
+    line-height: $standard-margin-size;
     font-family: inherit;
     padding: .5rem;
-    margin-top: 1rem;
+    margin-top: $standard-margin-size;
     overflow: scroll;
-}
 
-.encounterli p {
-    font-family: 'Raleway', serif;
+ p {
+    font-family: $main-font-family;
+}
 }
 
 
 .encounter-report {
     color: white;
-    background-color: red;
-    font-family: 'Raleway', sans-serif;
+    background-color: $theme-red-color;
+    font-family: $main-font-family;
     border: none;
     margin: 1%;
     width: 200px;
@@ -38,17 +44,18 @@
 }
 
 .encounters-div {
-    background-color: white;
+    background-color: black;
+    color: $theme-main-color;
 }
 
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $main-font-family;
     font-size: 46px;
     margin-bottom: 20px;
 }
 
 h3 {
-    font-family: 'Raleway', sans-serif;
+    font-family: $main-font-family;
     font-size: 23px;
     margin-bottom: 20px;
 

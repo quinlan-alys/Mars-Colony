@@ -16,7 +16,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-report',
   templateUrl: './report.component.html',
-  styleUrls: ['./report.component.css'],
+  styleUrls: ['./report.component.scss'],
   providers: [AliensService, EncounterService]
 })
 export class ReportComponent implements OnInit {

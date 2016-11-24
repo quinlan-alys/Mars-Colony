@@ -1,29 +1,26 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
-  </head>
+</head>
 
 
 <body class="register-body">
 
 
   <div class="register-div">
-  <h1> Register</h1>
+    <h1> Register</h1>
 
 
-<form [formGroup]= "registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
- 
-  <input class="optionstyle" type="text" placeholder="Name" formControlName="name">
+    <form [formGroup]="registerForm" class="register-form" (ngSubmit)="onSubmit($event)">
 
-  <input class="optionstyle" type="number" placeholder="Age" formControlName="age">
-  <select  class="optionstyle" formControlName="job_id">
+      <input class="optionstyle" type="text" placeholder="Name" formControlName="name">
+
+      <input class="optionstyle" type="number" placeholder="Age" formControlName="age">
+      <select class="optionstyle" formControlName="job_id">
   <option [value]='NO_JOB_SELECTED'>Select Occupation:</option>
   <option *ngFor="let job of marsJobs" [value]="job.id"> {{ job.name }}</option>
 
 </select>
-<!--<a routerLink="/encounters" routerLinkActive="active">-->
-<button class="check-in"> Check in </button>
-<!--</a>-->
-</form>
+      <button class="check-in"> Check in </button>
+    </form>
 
-</div>
-
+  </div>

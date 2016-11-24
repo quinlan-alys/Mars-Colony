@@ -1,0 +1,27 @@
+$standard-margin-size: 1rem;
+$main-font-family: "Raleway", sans-serif;
+$theme-red-color: red;
+$theme-main-color: white;
+
+
+.welcome-container {
+    background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)), url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+h2 {
+    text-align: center;
+    color: $theme-main-color;
+    font-family: $main-font-family;
+    font-size: 46px;
+    margin: 75px;
+
+
+}

@@ -1,0 +1,89 @@
+$standard-margin-size: 1rem;
+$main-font-family: "Raleway", sans-serif;
+$theme-red-color: red;
+$theme-main-color: white;
+
+.register-body {
+    background-color: black;
+    text-align:center;
+
+}
+
+.register-form {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+h1 {
+    color: $theme-main-color;
+    font-family: $main-font-family;
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.check-in {
+    color: $theme-main-color;
+    font-family: $main-font-family;
+    border: none;
+    margin-top: 4%;
+    outline: none;
+    font-size: 20px;
+    background-color: $theme-red-color;
+    width: 150px;
+    align-self: center;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+
+
+}
+.optionstyle {
+    background-color: black;
+    font-family: $main-font-family;
+    border: none;
+    color:$theme-red-color;
+    padding:15px;
+    height:45px;
+    border-bottom: 2px solid $theme-main-color;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    height: 45px;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+
+
+    &:focus {
+  
+  box-shadow: 0 0 10px rgba(441, 3, 38, 11);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 3px solid rgba(441, 3, 38, 11);
+  
+}
+}
+
+
+input[type=text], input[type=number], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  height: 45px;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+ 
+input[type=text]:focus, input[type=number]:focus, textarea:focus {
+  box-shadow: 0 0 10px rgba(441, 3, 38, 11);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 3px solid rgba(441, 3, 38, 11);
+}
