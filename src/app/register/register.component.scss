@@ -1,7 +1,4 @@
-$standard-margin-size: 1rem;
-$main-font-family: "Raleway", sans-serif;
-$theme-red-color: red;
-$theme-main-color: white;
+@import "../shared/themes.scss" ;
 
 .register-body {
     background-color: black;

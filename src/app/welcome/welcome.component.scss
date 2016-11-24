@@ -1,3 +1,5 @@
+@import "../shared/themes.scss" ;
+
 .welcome-container {
     background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)), url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
     background-repeat: no-repeat;
@@ -12,8 +14,8 @@
 
 h2, h3 {
     text-align: center;
-    color: white;
-    font-family: 'Raleway', sans-serif;
+    color: $theme-main-color;
+    font-family: $main-font-family;
     font-size: 46px;
     margin: 75px;
 

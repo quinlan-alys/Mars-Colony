@@ -1,8 +1,4 @@
-$standard-margin-size: 1rem;
-$main-font-family: "Raleway", sans-serif;
-$theme-red-color: red;
-$theme-main-color: white;
-
+@import "../shared/themes.scss" ;
 
 .encounters-body {
     text-align:center;
@@ -15,7 +11,7 @@ $theme-main-color: white;
     margin-left: 5%;
     font-family: $main-font-family;
     width: 100%;
-    height: 200px;
+    height: 350px;
     border: none;
     box-shadow: none;
     font-size: $standard-margin-size;

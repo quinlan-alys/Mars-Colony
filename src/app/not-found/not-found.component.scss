@@ -1,8 +1,4 @@
-$standard-margin-size: 1rem;
-$main-font-family: "Raleway", sans-serif;
-$theme-red-color: red;
-$theme-main-color: white;
-
+@import "../shared/themes.scss" ;
 
 .welcome-container {
     background: linear-gradient(rgba(0,0,0,.8),rgba(237,67,67,.7)), url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Mars_atmosphere_2.jpg);
